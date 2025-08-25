@@ -4,11 +4,8 @@ import json
 import requests
 import google.generativeai as genai
 
-# =====================
-# API Keys  (tip: prefer env vars; hard-coding keys is unsafe)
-# =====================
-GEMINI_API_KEY = "AIzaSyCJfcW0dMSptZ1TBzHxzXyeNkXM6urAW4Y"   # replace or use os.getenv("GEMINI_API_KEY")
-WEATHER_API_KEY = "941616aadcd50e3cdb8f82f318e6ed9e"         # replace or use os.getenv("WEATHER_API_KEY")
+GEMINI_API_KEY = "AIzaSyCJfcW0dMSptZ1TBzHxzXyeNkXM6urAW4Y"   
+WEATHER_API_KEY = "941616aadcd50e3cdb8f82f318e6ed9e"         
 
 # Configure Gemini
 genai.configure(api_key=GEMINI_API_KEY)
