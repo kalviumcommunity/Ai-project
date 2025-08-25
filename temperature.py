@@ -58,7 +58,8 @@ Advice:
     response = model.generate_content(
         prompt,
         generation_config=genai.types.GenerationConfig(
-            temperature=0.7  # <-- Added temperature control
+            temperature=0.7,   # Controls creativity/randomness
+            top_k=5            # <-- Added Top-K: considers only top 5 likely words at each step
         )
     )
     return response.text
