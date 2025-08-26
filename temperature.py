@@ -58,8 +58,9 @@ Advice:
     response = model.generate_content(
         prompt,
         generation_config=genai.types.GenerationConfig(
-            temperature=0.7,   # Controls creativity/randomness
-            top_k=5            # <-- Added Top-K: considers only top 5 likely words at each step
+            temperature=0.7,   # Controls randomness
+            top_k=5,           # Considers top 5 tokens
+            top_p=0.9          # Nucleus sampling: keeps only top tokens whose cumulative prob ≥ 90%
         )
     )
     return response.text
